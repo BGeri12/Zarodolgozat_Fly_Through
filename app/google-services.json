@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1003206184805",
+    "project_id": "zarodolgozat-fly-through",
+    "storage_bucket": "zarodolgozat-fly-through.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1003206184805:android:1ffcee14c2e913dc2e5b8c",
+        "android_client_info": {
+          "package_name": "com.example.zarodolgozat_fly_through"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1003206184805-7e32fb9n3ov48eh742e556k2lnsnidse.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCv-9IaoYTATkLXbn81KHLCYME9etxbX0M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1003206184805-7e32fb9n3ov48eh742e556k2lnsnidse.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
