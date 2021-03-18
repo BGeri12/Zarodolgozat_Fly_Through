@@ -154,7 +154,7 @@ public class JatekMegjelenit extends View {
 
         JatekActivity.txt_score.setText("0");
         score = 0;
-        initAkadaly();
+        initKarakter();
         initAkadaly();
 
     }
