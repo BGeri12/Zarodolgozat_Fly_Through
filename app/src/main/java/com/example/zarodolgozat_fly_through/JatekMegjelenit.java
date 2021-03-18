@@ -21,7 +21,7 @@ public class JatekMegjelenit extends View {
     private Runnable r;
     private ArrayList<AkadalyObject> arrAkadaly;
     private int sumpipe,distence;
-    private int score,bestscore=0;
+    private int score,bestscore;
     private boolean start;
     private Context contex;
 
@@ -51,7 +51,7 @@ public class JatekMegjelenit extends View {
     private void initAkadaly() {
 
         sumpipe = 4;
-        distence = 300*Allandok.SCREEN_HEIGHT/1920;
+        distence = 350*Allandok.SCREEN_HEIGHT/1920;
         arrAkadaly = new ArrayList<>();
         for (int i = 0; i < sumpipe; i++) {
             if (i<sumpipe/2){
