@@ -79,6 +79,34 @@
                 android:layout_gravity="center_horizontal"
                 android:inputType="textEmailAddress"/>
 
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        app:cardCornerRadius="8dp"
+        app:contentPadding="6dp"
+        android:id="@+id/RegharmadikCardView"
+        android:layout_below="@+id/RegmasodikCardView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FIGYELEM! Ügyeljen arra hogy a jelszó tartalmazzon nagybetűt kisbetűt és szám karaktert.Ezen túl a jelszó hossza legalább nyolc karakter legyen."
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textStyle="bold">
+            </TextView>
+
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -88,7 +116,11 @@
                 android:textSize="25sp"/>
 
         </LinearLayout>
+
     </androidx.cardview.widget.CardView>
+
+
+
 
 
 

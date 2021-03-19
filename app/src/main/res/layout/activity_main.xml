@@ -53,11 +53,11 @@
         >
 
         <EditText
-            android:id="@+id/editBejelentUserName"
+            android:id="@+id/editBejelentEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:hint="Felhasználó név"
+            android:hint="Email cím"
             android:textAlignment="center"
             android:textSize="25sp" />
 
