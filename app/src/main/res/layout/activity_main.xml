@@ -59,7 +59,8 @@
             android:layout_gravity="center_horizontal"
             android:hint="Email cím"
             android:textAlignment="center"
-            android:textSize="25sp" />
+            android:textSize="25sp"
+            android:inputType="textEmailAddress"/>
 
         <EditText
             android:id="@+id/editBejelentPassword"

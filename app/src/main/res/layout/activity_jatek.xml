@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/txt_score"
-        android:textColor="#047FE1"
+        android:textColor="#FF6347"
         android:text="0"
         android:textSize="50sp"
         android:layout_centerHorizontal="true"
@@ -53,27 +53,28 @@
             android:id="@+id/txt_scoreOver"
             android:text="0"
             android:textSize="100sp"
-            android:textColor="#ff00"
+            android:textColor="#FF6347"
             android:layout_marginTop="50dp"
             android:layout_centerHorizontal="true"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/txt_bestScore"
-            android:text="Best score: 0"
+            android:text="Rekord: 0"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/txt_scoreOver"
             android:layout_marginTop="30dp"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:textColor="#ff00"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Touch scrren to continues"
+            android:text="Nyomjon a képernyőre a folytatáshoz"
             android:textSize="20sp"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/txt_gameover"
             android:layout_marginTop="20dp"
-            android:textColor="#FF5722"/>
+            android:textColor="#ff00"/>
 
 
     </RelativeLayout>

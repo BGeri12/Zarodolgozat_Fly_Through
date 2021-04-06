@@ -17,10 +17,10 @@ import java.util.ArrayList;
 public class JatekMegjelenit extends View {
 
     private KarakterObject bat;
-    private Handler handler;
+    private Handler h;
     private Runnable r;
     private ArrayList<AkadalyObject> arrAkadaly;
-    private int sumpipe,distence;
+    private int akadaly, atRepulendoHely;
     private int score,bestscore;
     private boolean start;
     private Context contex;
@@ -31,7 +31,7 @@ public class JatekMegjelenit extends View {
         this.contex = context;
         SharedPreferences sp = context.getSharedPreferences("gamesetting",Context.MODE_PRIVATE);
         if (sp!=null){
-            bestscore = sp.getInt("bestscore",0);
+            bestscore = sp.getInt("Rekord ",0);
         }
         score = 0;
         start = false;
@@ -39,7 +39,7 @@ public class JatekMegjelenit extends View {
         initKarakter();
         initAkadaly();
 
-        handler = new Handler();
+        h = new Handler();
         r = new Runnable() {
             @Override
             public void run() {
@@ -50,18 +50,18 @@ public class JatekMegjelenit extends View {
 
     private void initAkadaly() {
 
-        sumpipe = 4;
-        distence = 350*Allandok.SCREEN_HEIGHT/1920;
+        akadaly = 4;
+        atRepulendoHely = 350*Allandok.SCREEN_HEIGHT/1920;
         arrAkadaly = new ArrayList<>();
-        for (int i = 0; i < sumpipe; i++) {
-            if (i<sumpipe/2){
-                this.arrAkadaly.add(new AkadalyObject(Allandok.SCREEN_WIDTH+i*((Allandok.SCREEN_WIDTH+200*Allandok.SCREEN_WIDTH/1080)/(sumpipe/2)),
+        for (int i = 0; i < akadaly; i++) {
+            if (i< akadaly /2){
+                this.arrAkadaly.add(new AkadalyObject(Allandok.SCREEN_WIDTH+i*((Allandok.SCREEN_WIDTH+200*Allandok.SCREEN_WIDTH/1080)/(akadaly /2)),
                         0,200*Allandok.SCREEN_WIDTH/1080,Allandok.SCREEN_HEIGHT/2 ));
                 this.arrAkadaly.get(this.arrAkadaly.size()-1).setBm(BitmapFactory.decodeResource(this.getResources(),R.drawable.akadaly2));
                 this.arrAkadaly.get(this.arrAkadaly.size()-1).randomY();
             }else {
-                this.arrAkadaly.add(new AkadalyObject(this.arrAkadaly.get(i-sumpipe/2).getX(),this.arrAkadaly.get(i-sumpipe/2).getY()
-                        + this.arrAkadaly.get(i-sumpipe/2).getHeight() + this.distence,200*Allandok.SCREEN_WIDTH/1080, Allandok.SCREEN_HEIGHT/2));
+                this.arrAkadaly.add(new AkadalyObject(this.arrAkadaly.get(i- akadaly /2).getX(),this.arrAkadaly.get(i- akadaly /2).getY()
+                        + this.arrAkadaly.get(i- akadaly /2).getHeight() + this.atRepulendoHely,200*Allandok.SCREEN_WIDTH/1080, Allandok.SCREEN_HEIGHT/2));
 
                 this.arrAkadaly.get(this.arrAkadaly.size()-1).setBm(BitmapFactory.decodeResource(this.getResources(),R.drawable.akadaly1));
 
@@ -90,35 +90,35 @@ public class JatekMegjelenit extends View {
         if (start){
 
             bat.draw(canvas);
-            for (int i = 0; i <sumpipe ; i++) {
+            for (int i = 0; i < akadaly; i++) {
                 if (bat.getRect().intersect(arrAkadaly.get(i).getRect()) ||bat.getY()-bat.getHeight()<0 ||bat.getY()>Allandok.SCREEN_HEIGHT){
 
                     AkadalyObject.speed = 0;
                     JatekActivity.txt_scoreOver.setText(JatekActivity.txt_score.getText());
-                    JatekActivity.txt_bestScore.setText("Best score:" +bestscore);
+                    JatekActivity.txt_bestScore.setText("Rekord:" +bestscore);
                     JatekActivity.txt_score.setVisibility(INVISIBLE);
                     JatekActivity.rl_gameOver.setVisibility(VISIBLE);
                 }
                 if (this.bat.getX()+this.bat.getWidth()>arrAkadaly.get(i).getX()+arrAkadaly.get(i).getWidth()/2
                         &&this.bat.getX()+this.bat.getWidth()<=arrAkadaly.get(i).getX()+arrAkadaly.get(i).getWidth()/2+AkadalyObject.speed
-                        &&i<sumpipe/2){
+                        &&i< akadaly /2){
                     score++;
                     if (score>bestscore){
                         bestscore = score;
-                        SharedPreferences sp = contex.getSharedPreferences("gamessatting",Context.MODE_PRIVATE);
+                        SharedPreferences sp = contex.getSharedPreferences("gamesetting",Context.MODE_PRIVATE);
                         SharedPreferences.Editor editor = sp.edit();
-                        editor.putInt("bestscore",bestscore);
+                        editor.putInt("Rekord ",bestscore);
                         editor.apply();
                     }
                     JatekActivity.txt_score.setText(""+score);
                 }
                 if (this.arrAkadaly.get(i).getX() < -arrAkadaly.get(i).getWidth()){
                     this.arrAkadaly.get(i).setX(Allandok.SCREEN_WIDTH);
-                    if (i<sumpipe/2){
+                    if (i< akadaly /2){
                         arrAkadaly.get(i).randomY();
                     }else{
-                        arrAkadaly.get(i).setY(this.arrAkadaly.get(i-sumpipe/2).getY()
-                                + this.arrAkadaly.get(i-sumpipe/2).getHeight() + this.distence);
+                        arrAkadaly.get(i).setY(this.arrAkadaly.get(i- akadaly /2).getY()
+                                + this.arrAkadaly.get(i- akadaly /2).getHeight() + this.atRepulendoHely);
                     }
                 }
                 this.arrAkadaly.get(i).draw(canvas);
@@ -129,9 +129,9 @@ public class JatekMegjelenit extends View {
             }
             bat.draw(canvas);
         }
-        handler.postDelayed(r,10);
+        h.postDelayed(r,10);
 
-        handler.postDelayed(r,10);
+        h.postDelayed(r,10);
     }
 
     @Override
