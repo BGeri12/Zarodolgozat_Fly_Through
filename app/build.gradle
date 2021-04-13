@@ -8,7 +8,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.example.zarodolgozat_fly_through"
+        applicationId "com.petrik.zarodolgozat_fly_through"
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1

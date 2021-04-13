@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "1003206184805",
-    "project_id": "zarodolgozat-fly-through",
-    "storage_bucket": "zarodolgozat-fly-through.appspot.com"
+    "project_number": "1073100571607",
+    "project_id": "flythroughnemmukodik",
+    "storage_bucket": "flythroughnemmukodik.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1003206184805:android:1ffcee14c2e913dc2e5b8c",
+        "mobilesdk_app_id": "1:1073100571607:android:215c594406cb8cbdacc192",
         "android_client_info": {
-          "package_name": "com.example.zarodolgozat_fly_through"
+          "package_name": "com.petrik.zarodolgozat_fly_through"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1003206184805-7e32fb9n3ov48eh742e556k2lnsnidse.apps.googleusercontent.com",
+          "client_id": "1073100571607-830nfsjdkdflan6u1hrclf16205n95to.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCv-9IaoYTATkLXbn81KHLCYME9etxbX0M"
+          "current_key": "AIzaSyDh0PW4rCidOfS2VTtJX64qDKsgpjEwBeI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1003206184805-7e32fb9n3ov48eh742e556k2lnsnidse.apps.googleusercontent.com",
+              "client_id": "1073100571607-830nfsjdkdflan6u1hrclf16205n95to.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

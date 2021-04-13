@@ -8,11 +8,11 @@
     tools:context=".JatekActivity"
     android:background="@drawable/hatter">
 
-    <com.example.zarodolgozat_fly_through.JatekMegjelenit
+    <com.petrik.zarodolgozat_fly_through.JatekMegjelenit
         android:id="@+id/jatekView"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    </com.example.zarodolgozat_fly_through.JatekMegjelenit>
+    </com.petrik.zarodolgozat_fly_through.JatekMegjelenit>
 
     <TextView
         android:visibility="invisible"
